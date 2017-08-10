@@ -6,6 +6,7 @@ function CustomWorld() {
   this.driver = new seleniumWebdriver.Builder()
     .forBrowser('chrome')
     .build();
+  this.driver.manage().timeouts().implicitlyWait(10000);
 }
 
 defineSupportCode(function({setWorldConstructor}) {
